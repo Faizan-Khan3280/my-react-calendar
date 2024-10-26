@@ -1,0 +1,109 @@
+/* src/Calendar.css */
+.calendar {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Max width to prevent it from being too wide */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: url('./bg.jpg') no-repeat center center/cover; /* Background image */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(76, 110, 245, 0.8); /* Added transparency for better readability */
+    color: white;
+    padding: 20px; /* Increased padding */
+    border-bottom: 2px solid #3b5bdb;
+  }
+  
+  .header button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .days-of-week, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .days-of-week div {
+    background: rgba(111, 66, 193, 0.8); /* Added transparency */
+    color: white;
+    padding: 15px; /* Increased padding */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .days div {
+    border: 1px solid #e0e0e0;
+    padding: 20px; /* Increased padding for better spacing */
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    color: white; /* Set date color to white */
+  }
+  
+  .days div:hover {
+    background: #007bff;
+    color: white; /* Ensure hover color is still white */
+    transform: scale(1.05);
+  }
+  
+  .day.empty {
+    background: transparent;
+  }
+  
+  .jump-to-date {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .jump-to-date input {
+    padding: 10px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .jump-to-date button {
+    background: #4c6ef5;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Adjust button padding */
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .jump-to-date button:hover {
+    background: #3b5bdb;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .header h2 {
+      font-size: 1.2em; /* Smaller header size on mobile */
+    }
+    
+    .jump-to-date {
+      flex-direction: column; /* Stack input and button on smaller screens */
+    }
+  }
+  

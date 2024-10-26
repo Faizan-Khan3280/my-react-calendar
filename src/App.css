@@ -1,0 +1,13 @@
+/* src/App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #fdfbfb, #ebedee);
+}
+
+h1 {
+  text-align: center;
+  color: #4c6ef5;
+  margin-top: 20px;
+}
